@@ -27,7 +27,7 @@ def remove_block_from_file(file_path, file_name):
         file.writelines(lines)
 
 # Usage example
-folder_path = '/Users/akhilesh.b/Desktop/nammayatri/Backend/app/provider-platform/dynamic-offer-driver-app/Main/src/Storage/Beam'
+folder_path = '/Users/akhilesh.b/Desktop/nammayatri/Backend/app/rider-platform/rider-app/Main/src/Storage/Beam/SearchRequest'
 file_name = 'DriverFlowStatus'
 
 for file_name in os.listdir(folder_path):
