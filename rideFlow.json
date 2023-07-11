@@ -78,7 +78,16 @@
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"postman.setEnvironmentVariable(\"driver_token\", jsonData.token);",
-											"console.log(jsonData)"
+											"console.log(jsonData)",
+                                            "pm.sendRequest({",
+                                            "    url: 'http://localhost:5000/?request_name=verify_for_driver',",
+                                            "    method: 'GET',",
+                                            "    headers: {",
+                                            "        'Content-Type': 'application/json'",
+                                            "    }",
+                                            "}, function (err, response) {",
+                                            "    console.log(response.json());",
+                                            "});"
 										],
 										"type": "text/javascript"
 									}
@@ -144,6 +153,15 @@
 									"script": {
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
+                                            "pm.sendRequest({",
+                                            "    url: 'http://localhost:5000/?request_name=enable_driver',",
+                                            "    method: 'GET',",
+                                            "    headers: {",
+                                            "        'Content-Type': 'application/json'",
+                                            "    }",
+                                            "}, function (err, response) {",
+                                            "    console.log(response.json());",
+                                            "});",
 											"console.log(jsonData)"
 										],
 										"type": "text/javascript"
@@ -206,7 +224,16 @@
 									"script": {
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
-											"console.log(jsonData)"
+											"console.log(jsonData)",
+                                            "pm.sendRequest({",
+                                            "    url: 'http://localhost:5000/?request_name=set_activity',",
+                                            "    method: 'GET',",
+                                            "    headers: {",
+                                            "        'Content-Type': 'application/json'",
+                                            "    }",
+                                            "}, function (err, response) {",
+                                            "    console.log(response.json());",
+                                            "});"
 										],
 										"type": "text/javascript"
 									}
@@ -283,7 +310,16 @@
 									"script": {
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
-											"console.log(jsonData)"
+											"console.log(jsonData)",
+                                            "pm.sendRequest({",
+                                            "    url: 'http://localhost:5000/?request_name=driver_location',",
+                                            "    method: 'GET',",
+                                            "    headers: {",
+                                            "        'Content-Type': 'application/json'",
+                                            "    }",
+                                            "}, function (err, response) {",
+                                            "    console.log(response.json());",
+                                            "});"
 										],
 										"type": "text/javascript"
 									}
@@ -351,7 +387,16 @@
 									"script": {
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
-											"console.log(jsonData)"
+											"console.log(jsonData)",
+                                            "pm.sendRequest({",
+                                            "    url: 'http://localhost:5000/?request_name=driver_profile',",
+                                            "    method: 'GET',",
+                                            "    headers: {",
+                                            "        'Content-Type': 'application/json'",
+                                            "    }",
+                                            "}, function (err, response) {",
+                                            "    console.log(response.json());",
+                                            "});"
 										],
 										"type": "text/javascript"
 									}
@@ -418,6 +463,15 @@
 											"var jsonData = JSON.parse(responseBody);",
 											"postman.setEnvironmentVariable(\"customer_authId\", jsonData.authId);",
 											"var jsonData = JSON.parse(responseBody);",
+                                            "pm.sendRequest({",
+                                            "    url: 'http://localhost:5000/?request_name=customer_auth',",
+                                            "    method: 'GET',",
+                                            "    headers: {",
+                                            "        'Content-Type': 'application/json'",
+                                            "    }",
+                                            "}, function (err, response) {",
+                                            "    console.log(response.json());",
+                                            "});",
 											"console.log(jsonData)"
 										],
 										"type": "text/javascript"
@@ -463,7 +517,16 @@
 											"var jsonData = JSON.parse(responseBody);",
 											"postman.setEnvironmentVariable(\"customer_token\", jsonData.token);",
 											"var jsonData = JSON.parse(responseBody);",
-											"console.log(jsonData)"
+											"console.log(jsonData)",
+                                            "pm.sendRequest({",
+                                            "    url: 'http://localhost:5000/?request_name=customer_verify',",
+                                            "    method: 'GET',",
+                                            "    headers: {",
+                                            "        'Content-Type': 'application/json'",
+                                            "    }",
+                                            "}, function (err, response) {",
+                                            "    console.log(response.json());",
+                                            "});"
 										],
 										"type": "text/javascript"
 									}
@@ -529,7 +592,16 @@
 											"const body = JSON.parse(responseBody);",
 											"postman.setEnvironmentVariable(\"customer_searchId\", body.searchId);",
 											"var jsonData = JSON.parse(responseBody);",
-											"console.log(jsonData)"
+											"console.log(jsonData)",
+                                            "pm.sendRequest({",
+                                            "    url: 'http://localhost:5000/?request_name=ride_search',",
+                                            "    method: 'GET',",
+                                            "    headers: {",
+                                            "        'Content-Type': 'application/json'",
+                                            "    }",
+                                            "}, function (err, response) {",
+                                            "    console.log(response.json());",
+                                            "});"
 										],
 										"type": "text/javascript"
 									}
@@ -599,6 +671,16 @@
 											"const body = JSON.parse(responseBody);",
 											"postman.setEnvironmentVariable(\"customer_estimate_id\", body.estimates[0].id);",
 											"var jsonData = JSON.parse(responseBody);",
+                                            "pm.sendRequest({",
+                                            "    url: 'http://localhost:5000/?request_name=search_result_for_estimates',",
+                                            "    method: 'GET',",
+                                            "    headers: {",
+                                            "        'Content-Type': 'application/json'",
+                                            "    }",
+                                            "}, function (err, response) {",
+                                            "    console.log(response.json());",
+                                            "});",
+                                            
 											"console.log(jsonData)"
 										],
 										"type": "text/javascript"
@@ -671,7 +753,16 @@
 									"script": {
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
-											"console.log(jsonData)"
+											"console.log(jsonData)",
+                                            "pm.sendRequest({",
+                                            "    url: 'http://localhost:5000/?request_name=estimate_select',",
+                                            "    method: 'GET',",
+                                            "    headers: {",
+                                            "        'Content-Type': 'application/json'",
+                                            "    }",
+                                            "}, function (err, response) {",
+                                            "    console.log(response.json());",
+                                            "});"
 										],
 										"type": "text/javascript"
 									}
@@ -744,7 +835,16 @@
 											"const body = JSON.parse(responseBody);",
 											"postman.setEnvironmentVariable(\"driver_search_request_id\", body.searchRequestsForDriver[0].searchRequestId);",
 											"var jsonData = JSON.parse(responseBody);",
-											"console.log(jsonData)"
+											"console.log(jsonData)",
+                                            "pm.sendRequest({",
+                                            "    url: 'http://localhost:5000/?request_name=nearby_rider_request',",
+                                            "    method: 'GET',",
+                                            "    headers: {",
+                                            "        'Content-Type': 'application/json'",
+                                            "    }",
+                                            "}, function (err, response) {",
+                                            "    console.log(response.json());",
+                                            "});"
 										],
 										"type": "text/javascript"
 									}
@@ -914,7 +1014,16 @@
 									"script": {
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
-											"console.log(jsonData)"
+											"console.log(jsonData)",
+                                            "pm.sendRequest({",
+                                            "    url: 'http://localhost:5000/?request_name=driver_offer',",
+                                            "    method: 'GET',",
+                                            "    headers: {",
+                                            "        'Content-Type': 'application/json'",
+                                            "    }",
+                                            "}, function (err, response) {",
+                                            "    console.log(response.json());",
+                                            "});"
 										],
 										"type": "text/javascript"
 									}
@@ -1139,7 +1248,16 @@
 											"const body = JSON.parse(responseBody);",
 											"postman.setEnvironmentVariable(\"customer_quote_id\", body.selectedQuotes[0].id);",
 											"var jsonData = JSON.parse(responseBody);",
-											"console.log(jsonData)"
+											"console.log(jsonData)",
+                                            "pm.sendRequest({",
+                                            "    url: 'http://localhost:5000/?request_name=customer_accept_qoute',",
+                                            "    method: 'GET',",
+                                            "    headers: {",
+                                            "        'Content-Type': 'application/json'",
+                                            "    }",
+                                            "}, function (err, response) {",
+                                            "    console.log(response.json());",
+                                            "});"
 										],
 										"type": "text/javascript"
 									}
@@ -1198,7 +1316,16 @@
 											"const body = JSON.parse(responseBody);",
 											"postman.setEnvironmentVariable(\"customer_bookingId\", body.bookingId);",
 											"var jsonData = JSON.parse(responseBody);",
-											"console.log(jsonData)"
+											"console.log(jsonData)",
+                                            "pm.sendRequest({",
+                                            "    url: 'http://localhost:5000/?request_name=quote_confirm',",
+                                            "    method: 'GET',",
+                                            "    headers: {",
+                                            "        'Content-Type': 'application/json'",
+                                            "    }",
+                                            "}, function (err, response) {",
+                                            "    console.log(response.json());",
+                                            "});"
 										],
 										"type": "text/javascript"
 									}
@@ -1344,7 +1471,16 @@
 											"postman.setEnvironmentVariable(\"ride_otp\", bookings.rideList[0].rideOtp);",
 											"postman.setEnvironmentVariable(\"customer_ride_id\", bookings.rideList[0].id);",
 											"var jsonData = JSON.parse(responseBody);",
-											"console.log(jsonData)"
+											"console.log(jsonData)",
+                                            "pm.sendRequest({",
+                                            "    url: 'http://localhost:5000/?request_name=start_ride',",
+                                            "    method: 'GET',",
+                                            "    headers: {",
+                                            "        'Content-Type': 'application/json'",
+                                            "    }",
+                                            "}, function (err, response) {",
+                                            "    console.log(response.json());",
+                                            "});"
 										],
 										"type": "text/javascript"
 									}
@@ -1407,7 +1543,16 @@
 											"const rideList = body.list.find ((ride) => ride.status=\"NEW\")",
 											"postman.setEnvironmentVariable(\"driver_ride_id\", rideList.id);",
 											"var jsonData = JSON.parse(responseBody);",
-											"console.log(jsonData)"
+											"console.log(jsonData)",
+                                            "pm.sendRequest({",
+                                            "    url: 'http://localhost:5000/?request_name=ride_list',",
+                                            "    method: 'GET',",
+                                            "    headers: {",
+                                            "        'Content-Type': 'application/json'",
+                                            "    }",
+                                            "}, function (err, response) {",
+                                            "    console.log(response.json());",
+                                            "});"
 										],
 										"type": "text/javascript"
 									}
@@ -1483,7 +1628,16 @@
 									"script": {
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
-											"console.log(jsonData)"
+											"console.log(jsonData)",
+                                            "pm.sendRequest({",
+                                            "    url: 'http://localhost:5000/?request_name=ride_start',",
+                                            "    method: 'GET',",
+                                            "    headers: {",
+                                            "        'Content-Type': 'application/json'",
+                                            "    }",
+                                            "}, function (err, response) {",
+                                            "    console.log(response.json());",
+                                            "});"
 										],
 										"type": "text/javascript"
 									}
@@ -1576,7 +1730,16 @@
 							"script": {
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
-									"console.log(jsonData)"
+									"console.log(jsonData)",
+                                    "pm.sendRequest({",
+                                    "    url: 'http://localhost:5000/?request_name=ride_end',",
+                                    "    method: 'GET',",
+                                    "    headers: {",
+                                    "        'Content-Type': 'application/json'",
+                                    "    }",
+                                    "}, function (err, response) {",
+                                    "    console.log(response.json());",
+                                    "});"
 								],
 								"type": "text/javascript"
 							}
